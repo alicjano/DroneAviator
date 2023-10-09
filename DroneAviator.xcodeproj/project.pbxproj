@@ -65,6 +65,7 @@
 		04FFEC142AD41AB700308658 = {
 			isa = PBXGroup;
 			children = (
+				04C37C172AD42AC20001E46D /* codemagic.yaml */,
 				04FFEC1F2AD41AB700308658 /* DroneAviator */,
 				04FFEC1E2AD41AB700308658 /* Products */,
 				A722DA46C8C2484787B6C1FA /* Pods */,
@@ -88,7 +89,6 @@
 				04FFEC392AD41AD700308658 /* Controllers */,
 				04FFEC382AD41AD200308658 /* Views */,
 				04FFEC372AD41ACB00308658 /* Scenes */,
-				04C37C172AD42AC20001E46D /* codemagic.yaml */,
 			);
 			path = DroneAviator;
 			sourceTree = "<group>";
