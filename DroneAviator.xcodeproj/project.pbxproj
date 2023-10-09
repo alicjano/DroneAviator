@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04C37C182AD42AC20001E46D /* codemagic.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 04C37C172AD42AC20001E46D /* codemagic.yaml */; };
 		04FFEC212AD41AB700308658 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FFEC202AD41AB700308658 /* AppDelegate.swift */; };
 		04FFEC2C2AD41AB700308658 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FFEC2A2AD41AB700308658 /* Main.storyboard */; };
 		04FFEC2E2AD41AB800308658 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FFEC2D2AD41AB800308658 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04C37C172AD42AC20001E46D /* codemagic.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = codemagic.yaml; sourceTree = "<group>"; };
 		04FFEC1D2AD41AB700308658 /* DroneAviator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DroneAviator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FFEC202AD41AB700308658 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04FFEC2B2AD41AB700308658 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				04FFEC392AD41AD700308658 /* Controllers */,
 				04FFEC382AD41AD200308658 /* Views */,
 				04FFEC372AD41ACB00308658 /* Scenes */,
+				04C37C172AD42AC20001E46D /* codemagic.yaml */,
 			);
 			path = DroneAviator;
 			sourceTree = "<group>";
@@ -139,7 +142,6 @@
 				9EAB2959542DEC80866A988A /* Pods-DroneAviator.debug.xcconfig */,
 				41D58583428D0B707CC407B1 /* Pods-DroneAviator.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -214,6 +216,7 @@
 				04FFEC2C2AD41AB700308658 /* Main.storyboard in Resources */,
 				04FFEC2E2AD41AB800308658 /* Assets.xcassets in Resources */,
 				04FFEC3E2AD41B6100308658 /* PlaneFire.sks in Resources */,
+				04C37C182AD42AC20001E46D /* codemagic.yaml in Resources */,
 				04FFEC3C2AD41AFC00308658 /* instruction.txt in Resources */,
 				04FFEC312AD41AB800308658 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -440,7 +443,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -474,7 +477,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
