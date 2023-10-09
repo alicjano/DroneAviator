@@ -4,7 +4,7 @@ workflows:
     max_build_duration: 120
     instance_type: mac_mini_m1
     integrations:
-      app_store_connect: 9c3b8a12-7fb4-4308-8e15-3b5c507fd6fead58d900-1e17-4ae0-acc8-b4f2cd851222
+      app_store_connect: Distribution API Key
     environment:
       ios_signing:
         distribution_type: app_store
