@@ -22,6 +22,7 @@
 		04FFEC502AD41C6700308658 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FFEC4F2AD41C6700308658 /* GameManager.swift */; };
 		04FFEC522AD41C8700308658 /* Vibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FFEC512AD41C8700308658 /* Vibration.swift */; };
 		04FFEC542AD41C9F00308658 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FFEC532AD41C9F00308658 /* Enums.swift */; };
+		B614A652FC5742B3447E4CBF /* Pods_DroneAviator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 352FCBB53ED05685E06CC2C2 /* Pods_DroneAviator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,10 @@
 		04FFEC4F2AD41C6700308658 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		04FFEC512AD41C8700308658 /* Vibration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibration.swift; sourceTree = "<group>"; };
 		04FFEC532AD41C9F00308658 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		04FFEC552AD423BF00308658 /* DroneAviator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DroneAviator.entitlements; sourceTree = "<group>"; };
+		352FCBB53ED05685E06CC2C2 /* Pods_DroneAviator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DroneAviator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41D58583428D0B707CC407B1 /* Pods-DroneAviator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DroneAviator.release.xcconfig"; path = "Target Support Files/Pods-DroneAviator/Pods-DroneAviator.release.xcconfig"; sourceTree = "<group>"; };
+		9EAB2959542DEC80866A988A /* Pods-DroneAviator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DroneAviator.debug.xcconfig"; path = "Target Support Files/Pods-DroneAviator/Pods-DroneAviator.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B614A652FC5742B3447E4CBF /* Pods_DroneAviator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +65,8 @@
 			children = (
 				04FFEC1F2AD41AB700308658 /* DroneAviator */,
 				04FFEC1E2AD41AB700308658 /* Products */,
+				A722DA46C8C2484787B6C1FA /* Pods */,
+				D95B14EBFFE402253392457D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +81,7 @@
 		04FFEC1F2AD41AB700308658 /* DroneAviator */ = {
 			isa = PBXGroup;
 			children = (
+				04FFEC552AD423BF00308658 /* DroneAviator.entitlements */,
 				04FFEC3A2AD41ADD00308658 /* Resources */,
 				04FFEC392AD41AD700308658 /* Controllers */,
 				04FFEC382AD41AD200308658 /* Views */,
@@ -124,6 +133,24 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		A722DA46C8C2484787B6C1FA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9EAB2959542DEC80866A988A /* Pods-DroneAviator.debug.xcconfig */,
+				41D58583428D0B707CC407B1 /* Pods-DroneAviator.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D95B14EBFFE402253392457D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				352FCBB53ED05685E06CC2C2 /* Pods_DroneAviator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,9 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04FFEC342AD41AB800308658 /* Build configuration list for PBXNativeTarget "DroneAviator" */;
 			buildPhases = (
+				422E247FADF02500221F5644 /* [CP] Check Pods Manifest.lock */,
 				04FFEC192AD41AB700308658 /* Sources */,
 				04FFEC1A2AD41AB700308658 /* Frameworks */,
 				04FFEC1B2AD41AB700308658 /* Resources */,
+				743ABDB9314F48F8D09BDC36 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -191,6 +220,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		422E247FADF02500221F5644 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DroneAviator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		743ABDB9314F48F8D09BDC36 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DroneAviator/Pods-DroneAviator-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DroneAviator/Pods-DroneAviator-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DroneAviator/Pods-DroneAviator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04FFEC192AD41AB700308658 /* Sources */ = {
@@ -353,18 +424,23 @@
 		};
 		04FFEC352AD41AB800308658 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EAB2959542DEC80866A988A /* Pods-DroneAviator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DroneAviator/DroneAviator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Drone Aviator";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -372,26 +448,33 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alicjano.DroneAviator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		04FFEC362AD41AB800308658 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41D58583428D0B707CC407B1 /* Pods-DroneAviator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DroneAviator/DroneAviator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Drone Aviator";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -399,9 +482,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alicjano.DroneAviator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
