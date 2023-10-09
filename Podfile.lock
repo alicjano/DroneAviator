@@ -19,9 +19,9 @@ PODS:
 
 DEPENDENCIES:
   - AppsFlyerFramework
-  - FBSDKCoreKit (~> 8.0.0)
-  - FBSDKLoginKit (~> 8.0.0)
-  - FBSDKShareKit (~> 8.0.0)
+  - FBSDKCoreKit
+  - FBSDKLoginKit
+  - FBSDKShareKit
 
 SPEC REPOS:
   trunk:
@@ -36,6 +36,6 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: 2cbaf5405379731b22f2ebc224f7c30f62378171
   FBSDKShareKit: bf3705fc42b660c3da9f15223db791b3c9c2acde
 
-PODFILE CHECKSUM: 9100d22a5cf8fa002b5120047d3c67dc5864d9f4
+PODFILE CHECKSUM: 95378b34f77e6c10cf1d327dbfca9da147071fb4
 
 COCOAPODS: 1.13.0

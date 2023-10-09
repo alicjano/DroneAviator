@@ -9,8 +9,8 @@ target 'DroneAviator' do
   pod 'AppsFlyerFramework'
 
   # Facebook
-  pod 'FBSDKCoreKit', '~> 8.0.0'
-  pod 'FBSDKLoginKit', '~> 8.0.0'
-  pod 'FBSDKShareKit', '~> 8.0.0'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+  pod 'FBSDKShareKit'
 
 end
