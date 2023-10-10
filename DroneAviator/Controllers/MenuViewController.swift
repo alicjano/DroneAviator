@@ -4,6 +4,8 @@ class MenuViewController: UIViewController {
     
     var playMenuView: UIView!
     
+    var logo: UIImageView!
+    
     var playButton: UIButton!
     var instructionButton: UIButton!
     var leaderBoardButton: UIButton!
@@ -29,6 +31,11 @@ class MenuViewController: UIViewController {
     }
     
     func setupButtons(){
+        logo = UIImageView(image: UIImage(named: "logo"))
+        logo.contentMode = .scaleAspectFit
+        logo.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(logo)
+        
         playButton = UIButton(type: .custom)
         playButton.translatesAutoresizingMaskIntoConstraints = false
         playButton.setImage(UIImage(named: "playButton"), for: .normal)
@@ -62,10 +69,16 @@ class MenuViewController: UIViewController {
         view.addSubview(customiseButton)
         
         NSLayoutConstraint.activate([
+            
             playButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             playButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             playButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
             playButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.1),
+            
+            logo.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            logo.bottomAnchor.constraint(equalTo: playButton.topAnchor),
+            logo.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
+            logo.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
             
             leaderBoardButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             leaderBoardButton.topAnchor.constraint(equalTo: playButton.bottomAnchor, constant: 20),
