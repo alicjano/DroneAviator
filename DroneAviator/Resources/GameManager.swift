@@ -1,5 +1,4 @@
 import Foundation
-import GameKit
 
 class GameManager {
     
@@ -32,13 +31,6 @@ class GameManager {
             cannon = .fourth
         case.fourth:
             break
-        }
-    }
-    
-    func saveHighscore(){
-        if GKLocalPlayer.local.isAuthenticated {
-            GKLeaderboard.submitScore(score, context: 0, player: GKLocalPlayer.local, leaderboardIDs: ["HighestScoreRMA"]){ _ in
-            }
         }
     }
     

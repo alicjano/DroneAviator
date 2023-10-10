@@ -40,9 +40,44 @@ class TimerGameScene: SKScene {
     // Stop the timer
     func stopTimer() {
             timer?.invalidate()
-            timer = nil
-            startTime = nil
-            accumulatedTime = 0
+        if RecordManager.shared.isNewRecord(score: Double(accumulatedTime + (startTime != nil ? Date().timeIntervalSince(startTime!) : 0)), gameType: .timer) {
+            // Create the UIAlertController
+                   let alertController = UIAlertController(title: "New Record!", message: "Please write your name to save it:", preferredStyle: .alert)
+                   
+                   // Add a UITextField to the UIAlertController
+                   alertController.addTextField { (textField) in
+                       textField.placeholder = "Your name.."
+                   }
+                   
+                   // Create the "OK" action
+                   let okAction = UIAlertAction(title: "OK", style: .default) {(_) in
+                       if let textField = alertController.textFields?.first {
+                           if !textField.text!.isEmpty {
+                               var name = textField.text
+                               RecordManager.shared.addScoreRecord(score: Double(self.accumulatedTime + (self.startTime != nil ? Date().timeIntervalSince(self.startTime!) : 0)), name: name!, gameType: .timer)
+                               self.timer = nil
+                               self.startTime = nil
+                               self.accumulatedTime = 0
+                           }
+                       }
+                   }
+                   
+                   // Create the "Cancel" action
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+                self.timer = nil
+                self.startTime = nil
+                self.accumulatedTime = 0
+            }
+                   
+                   // Add the actions to the UIAlertController
+                   alertController.addAction(okAction)
+                   alertController.addAction(cancelAction)
+                    let delegate = self.delegate as! GameViewController
+                   // Present the UIAlertController
+            delegate.present(alertController, animated: true) {
+    
+            }
+        }
     }
     
     // Update the timer label
@@ -337,7 +372,7 @@ class TimerGameScene: SKScene {
         gameState = .gameOver
         removeAllActions()
         ship.removeAllActions()
-        GameManager.shared.saveHighscore()
+        //TODO
         let removeAction = SKAction.fadeOut(withDuration: 0.5)
         ship.run(removeAction)
         run(SKAction.sequence([SKAction.wait(forDuration: 1) ,SKAction.run {

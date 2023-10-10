@@ -50,7 +50,6 @@ class CustomiseViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
         
         imageView = UIImageView()
-        imageView.backgroundColor = .white
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 20
         imageView.contentMode = .scaleAspectFit
@@ -69,7 +68,7 @@ class CustomiseViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 30),
             
             
-            picker.widthAnchor.constraint(equalTo: imageView.widthAnchor),
+            picker.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor),
             picker.heightAnchor.constraint(equalTo: imageView.heightAnchor),
             picker.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             picker.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20)

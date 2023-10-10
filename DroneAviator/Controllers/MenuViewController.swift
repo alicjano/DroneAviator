@@ -172,7 +172,8 @@ class MenuViewController: UIViewController {
     }
     
     @objc func leaderboard(){
-        //        performSegue(withIdentifier: "game", sender: gameButton)
+        let vc = LeaderboardViewController()
+        self.present(vc, animated: true)
     }
     
     @objc func instruction(){

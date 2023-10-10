@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		048E8AC02AD5436C00A97DC1 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048E8ABF2AD5436C00A97DC1 /* LeaderboardViewController.swift */; };
+		048E8AC22AD544F700A97DC1 /* RecordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048E8AC12AD544F700A97DC1 /* RecordManager.swift */; };
+		048E8AC42AD551A500A97DC1 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048E8AC32AD551A500A97DC1 /* CustomTableViewCell.swift */; };
 		04C37C182AD42AC20001E46D /* codemagic.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 04C37C172AD42AC20001E46D /* codemagic.yaml */; };
 		04FFEC212AD41AB700308658 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FFEC202AD41AB700308658 /* AppDelegate.swift */; };
 		04FFEC2C2AD41AB700308658 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FFEC2A2AD41AB700308658 /* Main.storyboard */; };
@@ -27,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		048E8ABF2AD5436C00A97DC1 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
+		048E8AC12AD544F700A97DC1 /* RecordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordManager.swift; sourceTree = "<group>"; };
+		048E8AC32AD551A500A97DC1 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		04C37C172AD42AC20001E46D /* codemagic.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = codemagic.yaml; sourceTree = "<group>"; };
 		04C37C192AD43BA60001E46D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04FFEC1D2AD41AB700308658 /* DroneAviator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DroneAviator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +117,7 @@
 				04FFEC2D2AD41AB800308658 /* Assets.xcassets */,
 				04FFEC2F2AD41AB800308658 /* LaunchScreen.storyboard */,
 				04FFEC3D2AD41B6100308658 /* PlaneFire.sks */,
+				048E8AC32AD551A500A97DC1 /* CustomTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -122,6 +129,7 @@
 				04FFEC492AD41BFD00308658 /* instructionViewController.swift */,
 				04FFEC4B2AD41C1500308658 /* GameViewController.swift */,
 				04FFEC4D2AD41C2A00308658 /* CustomizeViewController.swift */,
+				048E8ABF2AD5436C00A97DC1 /* LeaderboardViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -134,6 +142,7 @@
 				04FFEC4F2AD41C6700308658 /* GameManager.swift */,
 				04FFEC512AD41C8700308658 /* Vibration.swift */,
 				04FFEC532AD41C9F00308658 /* Enums.swift */,
+				048E8AC12AD544F700A97DC1 /* RecordManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -273,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048E8AC22AD544F700A97DC1 /* RecordManager.swift in Sources */,
 				04FFEC4A2AD41BFD00308658 /* instructionViewController.swift in Sources */,
 				04FFEC502AD41C6700308658 /* GameManager.swift in Sources */,
 				04FFEC542AD41C9F00308658 /* Enums.swift in Sources */,
@@ -281,8 +291,10 @@
 				04FFEC442AD41BAC00308658 /* CoinGameScene.swift in Sources */,
 				04FFEC4E2AD41C2A00308658 /* CustomizeViewController.swift in Sources */,
 				04FFEC522AD41C8700308658 /* Vibration.swift in Sources */,
+				048E8AC02AD5436C00A97DC1 /* LeaderboardViewController.swift in Sources */,
 				04FFEC4C2AD41C1500308658 /* GameViewController.swift in Sources */,
 				04FFEC482AD41BF200308658 /* MenuViewController.swift in Sources */,
+				048E8AC42AD551A500A97DC1 /* CustomTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

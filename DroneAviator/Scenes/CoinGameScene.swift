@@ -286,7 +286,35 @@ class CoinsGameScene: SKScene {
         gameState = .gameOver
         removeAllActions()
         ship.removeAllActions()
-        GameManager.shared.saveHighscore()
+                if RecordManager.shared.isNewRecord(score: Double(score), gameType: .standart) {
+                    // Create the UIAlertController
+                           let alertController = UIAlertController(title: "New Record!", message: "Please write your name to save it:", preferredStyle: .alert)
+                           
+                           // Add a UITextField to the UIAlertController
+                           alertController.addTextField { (textField) in
+                               textField.placeholder = "Your name.."
+                           }
+                           
+                           // Create the "OK" action
+                           let okAction = UIAlertAction(title: "OK", style: .default) { [weak self] (_) in
+                               if let textField = alertController.textFields?.first {
+                                   if !textField.text!.isEmpty {
+                                       var name = textField.text
+                                       RecordManager.shared.addScoreRecord(score: Double(self!.score), name: name!, gameType: .standart)
+                                   }
+                               }
+                           }
+                           
+                           // Create the "Cancel" action
+                           let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                           
+                           // Add the actions to the UIAlertController
+                           alertController.addAction(okAction)
+                           alertController.addAction(cancelAction)
+                            let delegate = self.delegate as! GameViewController
+                           // Present the UIAlertController
+                            delegate.present(alertController, animated: true)
+                }
         let removeAction = SKAction.fadeOut(withDuration: 0.5)
         ship.run(removeAction)
         run(SKAction.sequence([SKAction.wait(forDuration: 1) ,SKAction.run {
