@@ -1,1 +1,27 @@
+* * * Drone Aviator * * *
 
+Objective: Depending on the selected game mode:
+
+Coin Mode: Collect all the coins while flying around the drone and advance to the next level. Avoid the drone's bullets to survive and collect as many coins as possible.
+Timer Mode: Survive as long as possible while avoiding the drone's bullets.
+
+Controls:
+Aircraft Movement: Tap on the screen to control the aircraft.
+Collect Coins: Fly through a coin to automatically collect it.
+Dodge Bullets: Avoid the bullets fired by the drone by making maneuvers controlled through screen taps.
+
+Coin Mode:
+Level Objective: Collect all the coins to proceed to the next level.
+Level Difficulty: With each new level, the drone's shooting speed and accuracy will increase.
+Defeat: If your aircraft is hit by a drone's bullet, the game ends.
+Progress: After successfully collecting all the coins on the current level, you move on to the next level with increased difficulty.
+
+Timer Mode:
+Objective: Survive for as long as possible, avoiding the drone's bullets.
+Level Difficulty: Over time, the drone will shoot faster and more accurately.
+Progress: Your score in "Timer Mode" is based on how long you can survive.
+Completion: The mode ends when your aircraft is hit by a bullet.
+Leaderboards:
+
+The game features two leaderboards: one for "Coin Mode" and one for "Timer Mode."
+Earn points to rank on the leaderboards and compete with other players.

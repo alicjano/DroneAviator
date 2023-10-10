@@ -94,15 +94,15 @@ extension LeaderboardViewController: UITableViewDelegate, UITableViewDataSource 
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
         let score = leaders[indexPath.row].score
         if segmentControl.selectedSegmentIndex == 0 {
-            cell.scoreLabel.attributedText = NSAttributedString(string: "\(score)", attributes: [NSAttributedString.Key.font : UIFont(name: "AvenirNext-Bold", size: 16), NSAttributedString.Key.foregroundColor : UIColor(.white)])
+            cell.scoreLabel.attributedText = NSAttributedString(string: "\(score)", attributes: [NSAttributedString.Key.font : UIFont(name: "AvenirNext-Bold", size: 16), NSAttributedString.Key.foregroundColor : UIColor(cgColor: CGColor(red: 255, green: 255, blue: 255, alpha: 1))])
         } else {
             let milliseconds = Int(score * 100) % 100
             let seconds = Int(score) % 60
             let minutes = Int(score) / 60
             let timeString = String(format: "%02d:%02d:%02d", minutes, seconds, milliseconds)
-            cell.scoreLabel.attributedText = NSAttributedString(string: timeString, attributes: [NSAttributedString.Key.font : UIFont(name: "AvenirNext-Bold", size: 16), NSAttributedString.Key.foregroundColor : UIColor(.white)])
+            cell.scoreLabel.attributedText = NSAttributedString(string: timeString, attributes: [NSAttributedString.Key.font : UIFont(name: "AvenirNext-Bold", size: 16), NSAttributedString.Key.foregroundColor : UIColor(cgColor: CGColor(red: 255, green: 255, blue: 255, alpha: 1))])
         }
-        cell.otherLabel.attributedText = NSAttributedString(string: "\(leaders[indexPath.row].name)", attributes: [NSAttributedString.Key.font : UIFont(name: "AvenirNext-Bold", size: 16), NSAttributedString.Key.foregroundColor : UIColor(.white)])
+        cell.otherLabel.attributedText = NSAttributedString(string: "\(leaders[indexPath.row].name)", attributes: [NSAttributedString.Key.font : UIFont(name: "AvenirNext-Bold", size: 16), NSAttributedString.Key.foregroundColor : UIColor(cgColor: CGColor(red: 255, green: 255, blue: 255, alpha: 1))])
         return cell
     }
     
