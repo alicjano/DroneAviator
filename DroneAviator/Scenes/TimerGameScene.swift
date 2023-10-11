@@ -3,6 +3,8 @@ import GameKit
 
 class TimerGameScene: SKScene {
     
+    var score: Double = 0
+    
     var timer: Timer?
     var startTime: Date?
     var accumulatedTime: TimeInterval = 0
@@ -40,7 +42,7 @@ class TimerGameScene: SKScene {
     // Stop the timer
     func stopTimer() {
             timer?.invalidate()
-        if RecordManager.shared.isNewRecord(score: Double(accumulatedTime + (startTime != nil ? Date().timeIntervalSince(startTime!) : 0)), gameType: .timer) {
+        if RecordManager.shared.isNewRecord(score: score, gameType: .timer) {
             // Create the UIAlertController
                    let alertController = UIAlertController(title: "New Record!", message: "Please write your name to save it:", preferredStyle: .alert)
                    
@@ -54,7 +56,14 @@ class TimerGameScene: SKScene {
                        if let textField = alertController.textFields?.first {
                            if !textField.text!.isEmpty {
                                var name = textField.text
-                               RecordManager.shared.addScoreRecord(score: Double(self.accumulatedTime + (self.startTime != nil ? Date().timeIntervalSince(self.startTime!) : 0)), name: name!, gameType: .timer)
+                               RecordManager.shared.addScoreRecord(score: self.score, name: name!, gameType: .timer)
+                               let currentTime = self.accumulatedTime + (self.startTime != nil ? Date().timeIntervalSince(self.startTime!) : 0)
+                               let milliseconds = Int(currentTime * 100) % 100
+                               let seconds = Int(currentTime) % 60
+                               let minutes = Int(currentTime) / 60
+                               let timeString = String(format: "%02d:%02d:%02d", minutes, seconds, milliseconds)
+                               print(timeString)
+                               print(Double(self.accumulatedTime + (self.startTime != nil ? Date().timeIntervalSince(self.startTime!) : 0)))
                                self.timer = nil
                                self.startTime = nil
                                self.accumulatedTime = 0
@@ -88,12 +97,13 @@ class TimerGameScene: SKScene {
     // Update the timer label with milliseconds
     func updateTimerLabel() {
             let currentTime = accumulatedTime + (startTime != nil ? Date().timeIntervalSince(startTime!) : 0)
+            print(currentTime)
             let milliseconds = Int(currentTime * 100) % 100
             let seconds = Int(currentTime) % 60
             let minutes = Int(currentTime) / 60
             timeString = String(format: "%02d:%02d:%02d", minutes, seconds, milliseconds)
-            print(timeString)
-        scoreLabel.attributedText = NSAttributedString(string: timeString, attributes: [NSAttributedString.Key.font : UIFont(name: "AvenirNext-Bold", size: 30), NSAttributedString.Key.foregroundColor : UIColor(cgColor: CGColor(red: 51/255, green: 60/255, blue: 65/255, alpha: 1))])
+            score = currentTime
+            scoreLabel.attributedText = NSAttributedString(string: timeString, attributes: [NSAttributedString.Key.font : UIFont(name: "AvenirNext-Bold", size: 30), NSAttributedString.Key.foregroundColor : UIColor(cgColor: CGColor(red: 51/255, green: 60/255, blue: 65/255, alpha: 1))])
     }
     
     func getTime() -> String {
