@@ -25,8 +25,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb0</string>
-				<string>nameapp</string>
+				<string>fb623450406658467</string>
 			</array>
 		</dict>
 	</array>
@@ -35,9 +34,9 @@
 	<key>FacebookAdvertiserIDCollectionEnabled</key>
 	<true/>
 	<key>FacebookAppID</key>
-	<string>1492668301551951</string>
+	<string>623450406658467</string>
 	<key>FacebookClientToken</key>
-	<string>519b74089065ab7eb1309d4b91336a35</string>
+	<string>75fb7a5c3b52dec2b73f838feb62d0f3</string>
 	<key>FacebookDisplayName</key>
 	<string>Drone Aviator</string>
 	<key>LSRequiresIPhoneOS</key>

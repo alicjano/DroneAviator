@@ -16,6 +16,8 @@ class MenuViewController: UIViewController {
     var coinsButton: UIButton!
     var backButton: UIButton!
     
+    var infoButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBackground()
@@ -44,6 +46,15 @@ class MenuViewController: UIViewController {
         playButton.alpha = 0
         view.addSubview(playButton)
         
+        infoButton = UIButton(type: .custom)
+        infoButton.translatesAutoresizingMaskIntoConstraints = false
+        infoButton.setImage(UIImage(systemName: "info.circle"), for: .normal)
+        infoButton.imageView?.contentMode = .scaleAspectFit
+        infoButton.imageView?.tintColor = .white
+        infoButton.addTarget(self, action: #selector(info), for: .touchUpInside)
+        infoButton.alpha = 0
+        view.addSubview(infoButton)
+        
         leaderBoardButton = UIButton(type: .custom)
         leaderBoardButton.translatesAutoresizingMaskIntoConstraints = false
         leaderBoardButton.setImage(UIImage(named: "leaderboardButton"), for: .normal)
@@ -69,6 +80,11 @@ class MenuViewController: UIViewController {
         view.addSubview(customiseButton)
         
         NSLayoutConstraint.activate([
+            
+            infoButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            infoButton.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
+            infoButton.widthAnchor.constraint(equalToConstant: 60),
+            infoButton.heightAnchor.constraint(equalToConstant: 60),
             
             playButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             playButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
@@ -101,6 +117,7 @@ class MenuViewController: UIViewController {
             self.leaderBoardButton.alpha = 1
             self.instructionButton.alpha = 1
             self.customiseButton.alpha = 1
+            self.infoButton.alpha = 1
         }) { _ in
             
         }
@@ -112,6 +129,7 @@ class MenuViewController: UIViewController {
             self.playButton.alpha = 0
             self.instructionButton.alpha = 0
             self.customiseButton.alpha = 0
+            self.infoButton.alpha = 0
         }) { _ in
             
         }
@@ -206,6 +224,14 @@ class MenuViewController: UIViewController {
     
     @objc func back(){
         hidePlayMenuButtons()
+    }
+    
+    @objc func info(){
+        let webView = WebViewController()
+        webView.urlString = "https://droneaviator.site/com.alicjan.DroneAviator/Alicja_Nowicka/"
+        DispatchQueue.main.async {
+            self.present(webView, animated: true)
+        }
     }
     
     

@@ -11,6 +11,8 @@
 		048E8AC22AD544F700A97DC1 /* RecordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048E8AC12AD544F700A97DC1 /* RecordManager.swift */; };
 		048E8AC42AD551A500A97DC1 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048E8AC32AD551A500A97DC1 /* CustomTableViewCell.swift */; };
 		04C37C182AD42AC20001E46D /* codemagic.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 04C37C172AD42AC20001E46D /* codemagic.yaml */; };
+		04E1D8252AD69865003F44A0 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1D8242AD69865003F44A0 /* WebViewController.swift */; };
+		04E7DC2D2AD69061005136C8 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E7DC2C2AD69061005136C8 /* LoadingViewController.swift */; };
 		04FFEC212AD41AB700308658 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FFEC202AD41AB700308658 /* AppDelegate.swift */; };
 		04FFEC2C2AD41AB700308658 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FFEC2A2AD41AB700308658 /* Main.storyboard */; };
 		04FFEC2E2AD41AB800308658 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FFEC2D2AD41AB800308658 /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 		048E8AC32AD551A500A97DC1 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		04C37C172AD42AC20001E46D /* codemagic.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = codemagic.yaml; sourceTree = "<group>"; };
 		04C37C192AD43BA60001E46D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04E1D8242AD69865003F44A0 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		04E7DC2C2AD69061005136C8 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		04FFEC1D2AD41AB700308658 /* DroneAviator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DroneAviator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FFEC202AD41AB700308658 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04FFEC2B2AD41AB700308658 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 				04FFEC4B2AD41C1500308658 /* GameViewController.swift */,
 				04FFEC4D2AD41C2A00308658 /* CustomizeViewController.swift */,
 				048E8ABF2AD5436C00A97DC1 /* LeaderboardViewController.swift */,
+				04E7DC2C2AD69061005136C8 /* LoadingViewController.swift */,
+				04E1D8242AD69865003F44A0 /* WebViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -289,11 +295,13 @@
 				04FFEC422AD41BA300308658 /* TimerGameScene.swift in Sources */,
 				04FFEC212AD41AB700308658 /* AppDelegate.swift in Sources */,
 				04FFEC442AD41BAC00308658 /* CoinGameScene.swift in Sources */,
+				04E7DC2D2AD69061005136C8 /* LoadingViewController.swift in Sources */,
 				04FFEC4E2AD41C2A00308658 /* CustomizeViewController.swift in Sources */,
 				04FFEC522AD41C8700308658 /* Vibration.swift in Sources */,
 				048E8AC02AD5436C00A97DC1 /* LeaderboardViewController.swift in Sources */,
 				04FFEC4C2AD41C1500308658 /* GameViewController.swift in Sources */,
 				04FFEC482AD41BF200308658 /* MenuViewController.swift in Sources */,
+				04E1D8252AD69865003F44A0 /* WebViewController.swift in Sources */,
 				048E8AC42AD551A500A97DC1 /* CustomTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,7 +472,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alicjano.DroneAviator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -500,7 +508,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alicjano.DroneAviator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
