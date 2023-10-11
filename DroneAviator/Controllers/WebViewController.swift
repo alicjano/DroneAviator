@@ -12,6 +12,10 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     var backButton: UIButton!
     var buttonStackView: UIStackView!
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .all
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         webView = WKWebView()

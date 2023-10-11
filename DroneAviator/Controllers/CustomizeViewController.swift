@@ -5,6 +5,10 @@ class CustomiseViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     var imageView: UIImageView!
     var picker: UIPickerView!
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

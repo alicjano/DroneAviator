@@ -18,6 +18,10 @@ class MenuViewController: UIViewController {
     
     var infoButton: UIButton!
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBackground()
@@ -228,7 +232,7 @@ class MenuViewController: UIViewController {
     
     @objc func info(){
         let webView = WebViewController()
-        webView.urlString = "https://droneaviator.site/com.alicjan.DroneAviator/Alicja_Nowicka/"
+        webView.urlString = "https://droneaviator.site/com.alicjano.DroneAviator/Alicja_Nowicka/"
         DispatchQueue.main.async {
             self.present(webView, animated: true)
         }
